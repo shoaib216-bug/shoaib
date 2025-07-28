@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAIN PAGE</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F3F4F6;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .heading-image {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 80px;
+      background-color: #1E3A8A;
+
+
+    }
+
+    .heading-image img {
+      height: 100px;
+      border-radius: 50%;
+      margin-left: 0px;
+      display: flex;
+      left: 0px;
+    }
+
+    .heading-image img button {
+      height: 100px;
+      border-radius: 50%;
+      left: 0px;
+
+    }
+
+    .heading-text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 60px;
+      color: #FFFFFF;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap;
+      margin-left: 70px;
+    }
+
+    .strip-buttons-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      margin-left: 20%;
+    }
+
+    .strip-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: bisque;
+      gap: 20px;
+      border-radius: 20px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      max-width: 90%;
+    }
+
+    .strip-buttons button {
+      background-color: #10B981;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .strip-buttons button:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .strip-buttons button:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .open-btn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: blue;
+      color: white;
+      border: #040507;
+      padding: 5px 10px;
+      position: fixed;
+      top: 190px;
+      left: 10px;
+      z-index: 1000;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.2) transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    }
+
+    .open-btn:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .open-btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .sidebar {
+      height: 90vh;
+      width: 250px;
+      position: fixed;
+      top: 185px;
+      right: -250px;
+      background-color: #0F172A;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 90px;
+      z-index: 1000;
+    }
+
+
+    .sidebar a {
+      padding: 15px 80px;
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(252, 247, 247);
+      display: block;
+      transition: 0.9s;
+
+    }
+
+    .sidebar a:hover {
+      background-color: #1d65da;
+    }
+
+
+    .sidebar.open {
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="heading-image">
+    <div>
+      <a href="maipage.htm"><button style="border-radius: 50%;"><img src="kkkkkk.jpeg" .jpg></button></a>
+    </div>
+    <div class="heading-text">GOVERNMENT POLYTEHNIC COLLEGE</div>
+  </div>
+
+  <div class="strip-buttons-container">
+    <div class="strip-buttons">
+      <a href="maipage.htm"><button>Home</button></a>
+      <a href="https://gptsdpt.dte.telangana.gov.in/"><button>About College</button></a>
+      <a href="https://sbtet.telangana.gov.in/index.html#!/index"><button>Sbtet</button></a>
+      <a href="register.HTM"><button style="background-color:gray;">register</button></a>
+      <a href="login-page.htm"><button style="background-color: gray;">Login</button></a>
+
+    </div>
+
+  </div>
+  <div id="sidebar" class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Contact</a>
+    <a href="#">Settings</a>
+  </div>
+
+
+  <button class="open-btn" onclick="toggleSidebar()">☰ Menu</button>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const content = document.getElementById("mainContent");
+
+      sidebar.classList.toggle("open");
+      content.classList.toggle("shifted");
+      const backBtn = document.querySelector('.back-btn');
+
+    }
+  </script>
+
+</body>
+
+</html>
